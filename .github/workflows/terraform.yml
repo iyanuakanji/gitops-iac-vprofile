@@ -6,11 +6,13 @@ on:
             - stage
         paths:
             - terraform/**
+            - */
     pull_request:
         branches:
             - main
         paths:
             - terraform/**
+            - */
 
 env:
 
