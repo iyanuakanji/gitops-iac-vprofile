@@ -5,14 +5,12 @@ on:
             - main
             - stage
         paths:
-            - '**/ingress.yaml'
             - terraform/**
             
     pull_request:
         branches:
             - main
         paths:
-            - '**/ingress.yaml'
             - terraform/**
 
 env:
