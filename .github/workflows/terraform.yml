@@ -80,4 +80,6 @@ jobs:
 
             - name: Install Ingress Controller in Cluster 
               if: steps.apply.outcome == 'success' && steps.getconfig.outcome == 'success'
-              run: kubectl apply -f ingress.yaml
+              run: |
+                kubectl version
+                kubectl apply -f ingress.yaml
