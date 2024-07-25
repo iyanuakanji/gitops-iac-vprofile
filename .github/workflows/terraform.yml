@@ -5,14 +5,12 @@ on:
             - main
             - stage
         paths:
-            - '**/ingress.yaml'
             - terraform/**
             
     pull_request:
         branches:
             - main
         paths:
-            - '**/ingress.yaml'
             - terraform/**
 
 env:
@@ -82,4 +80,4 @@ jobs:
 
             - name: Install Ingress Controller in Cluster 
               if: steps.apply.outcome == 'success' && steps.getconfig.outcome == 'success'
-              run: kubectl apply -f ./ingress.yaml
+              run: kubectl apply -f ingress.yaml
