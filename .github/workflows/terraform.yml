@@ -82,4 +82,4 @@ jobs:
               if: steps.apply.outcome == 'success' && steps.getconfig.outcome == 'success'
               run: |
                 kubectl version
-                kubectl apply -f ingress.yaml
+                kubectl --kubeconfig /home/runner/.kube/config apply -f ingress.yaml
